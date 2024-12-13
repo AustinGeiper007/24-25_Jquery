@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callbacks</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("img").hide("slow", function(){
+          alert("It's Gone!");
+        });
+
+      });
+    </script>
+</head>
+<body>
+<img id="chicago" src="img/chicago.jpg" style="position:absolute; left:200px; top:200px; width:200px"/>
+
+
+
+</body>
+</html>
