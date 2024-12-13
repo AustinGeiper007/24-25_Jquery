@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("button").click(function(){
+          $("#chicago").animate({
+            left: '+=50px',
+            opacity: "0.2",
+            height: '+=150'
+          })
+        });
+      });
+    </script>
+</head>
+<body>
+<img src="img/chicago.jpg" id="chicago" alt="chicago" style="position: absolute; left:200px; top:100px; width:500px"/>
+<button>Click here</button>
+
+
+
+</body>
+</html>
