@@ -7,24 +7,57 @@
     <script>
       $(document).ready(function(){
         $("button").click(function(){
-          $("#chicago").animate({
-            left: '+=50px',
-            opacity: "0.2",
-            height: '+=150'
+          $("#blue").animate({
+            left: '+=500px',
+            opacity: '0',
           });
-          $("#chicago").animate({
-            left: '-=50px',
-            opacity: "1",
-            height: '-=150'
+
+          $("#red").animate({
+            top: '+=500px',
+            opacity: '0',
           });
+
+          $("#cyan").animate({
+            top: '-=500px',
+            opacity: '0',
+          });
+
+          $("#magenta").animate({
+            left: '-=500px',
+            opacity: '0',
+          })
+
+          $("#blue").animate({
+            left: '-=500px',
+            opacity: '1',
+          });
+
+          $("#red").animate({
+            top: '-=500px',
+            opacity: '1',
+          });
+
+          $("#cyan").animate({
+            top: '+=500px',
+            opacity: '1',
+          });
+
+          $("#magenta").animate({
+            left: '+=500px',
+            opacity: '1',
+          })
+
         });
       });
     </script>
 </head>
 <body>
-<img src="img/chicago.jpg" id="chicago" alt="chicago" style="position: absolute; left:200px; top:100px; width:500px"/>
 <button>Click to play animation</button>
 
+<div id="blue" style="position: absolute; left: 50px; top: 100px; background-color: blue; width: 500px; height: 500px"></div>
+<div id="red" style="position: absolute; left: 550px; top: 100px; background-color: red; width: 500px; height: 500px"></div>
+<div id="cyan" style="position: absolute; left: 50px; top: 600px; background-color: cyan; width: 500px; height: 500px"></div>
+<div id="magenta" style="position: absolute; left: 550px; top: 600px; background-color: magenta; width: 500px; height: 500px"></div>
 
 
 </body>
