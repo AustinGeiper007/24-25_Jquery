@@ -4,20 +4,141 @@
     <meta charset="UTF-8">
     <title>Form Validation</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#submit").click(function(){
+          if($("#fname").val().length === 0){
+            $("#fname").css({"border-color": "red"})
+            $("#fnameE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#fname").css({"border-color": "black"})
+            $("#fnameE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+          if($("#lname").val().length === 0){
+            $("#lname").css({"border-color": "red"})
+            $("#lnameE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#lname").css({"border-color": "black"})
+            $("#lnameE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+          if($("#address").val().length === 0){
+            $("#address").css({"border-color": "red"})
+            $("#addressE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#address").css({"border-color": "black"})
+            $("#addressE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+          if($("#city").val().length === 0){
+            $("#city").css({"border-color": "red"})
+            $("#cityE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#city").css({"border-color": "black"})
+            $("#cityE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+          if($("#zipcode").val().length === 0){
+            $("#zipcode").css({"border-color": "red"})
+            $("#zipE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#zipcode").css({"border-color": "black"})
+            $("#zipE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+          if($("#phone").val().length === 0){
+            $("#phone").css({"border-color": "red"})
+            $("#phoneE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#phone").css({"border-color": "black"})
+            $("#phoneE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+          if($("#email").val().length === 0){
+            $("#email").css({"border-color": "red"})
+            $("#emailE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#email").css({"border-color": "black"})
+            $("#emailE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+          if($("#dob").val().length === 0){
+            $("#dob").css({"border-color": "red"})
+            $("#dobE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#dob").css({"border-color": "black"})
+            $("#dobE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+          if($("#username").val().length === 0){
+            $("#username").css({"border-color": "red"})
+            $("#usernameE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#username").css({"border-color": "black"})
+            $("#usernameE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+          if($("#password").val().length === 0){
+            $("#password").css({"border-color": "red"})
+            $("#passwordE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#password").css({"border-color": "black"})
+            $("#passwordE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+          if($("#confirmPassword").val().length === 0){
+            $("#confirmPassword").css({"border-color": "red"})
+            $("#confirmPasswordE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#confirmPassword").css({"border-color": "black"})
+            $("#confirmPasswordE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
+        });
+      });
+    </script>
 </head>
 <body>
 <form>
   <label for="fname">First Name</label>
-  <input type="text" name="fname" id="fname"><br />
+  <input type="text" name="fname" id="fname">
+  <div id="fnameE" style="display: none; color: red">Please enter first name</div>
+  <br />
 
   <label for="lname">Last Name</label>
-  <input type="text" name="lname" id="lname"><br />
+  <input type="text" name="lname" id="lname">
+  <div id="lnameE" style="display: none; color: red">Please enter last name</div>
+  <br />
 
   <label for="address">Address</label>
-  <input type="text" name="address" id="address"><br />
-
+  <input type="text" name="address" id="address">
   <label for="address2">2nd Address</label>
-  <input type="text" name="address2" id="address2"><br />
+  <input type="text" name="address2" id="address2">
+  <div id="addressE" style="display: none; color: red">Please enter address</div>
+  <br />
 
   <label for="city">City</label>
   <input type="text" name="city" id="city">
@@ -79,28 +200,46 @@
   </select>
 
   <label for="zipcode">ZIP</label>
-  <input type="text" name="zipcode" id="zipcode"><br />
+  <input type="text" name="zipcode" id="zipcode">
+  <div id="cityE" style="display: none; color: red">Please enter city</div>
+  <div id="zipE" style="display: none; color: red">Please enter zip</div>
+  <br />
 
   <label for="phone">Phone</label>
-  <input type="text" name="phone" id="phone"><br />
+  <input type="text" name="phone" id="phone">
+  <div id="phoneE" style="display: none; color: red">Please enter phone number</div>
+  <br />
 
   <label for="email">Email</label>
-  <input type="text" name="email" id="email"><br />
+  <input type="text" name="email" id="email">
+  <div id="emailE" style="display: none; color: red">Please enter Email</div>
+  <br />
 
-  <label for="dob">Date of Birth</label>
-  <input type="text" name="dob" id="dob"><br />
+  <label for="dob">Date of Birth (mm/dd/yyyy)</label>
+  <input type="text" name="dob" id="dob">
+  <div id="dobE" style="display: none; color: red">Please enter D.O.B.</div>
+  <br />
 
   <label for="Username">Username</label>
-  <input type="text" name="username" id="username"><br />
+  <input type="text" name="username" id="username">
+  <div id="usernameE" style="display: none; color: red">Please enter Username</div>
+  <br />
 
   <label for="password">Password</label>
-  <input type="text" name="password" id="password"><br />
+  <input type="text" name="password" id="password">
+  <div id="passwordE" style="display: none; color: red">Please enter a password</div>
+  <br />
 
   <label for="confirmPassword">Confirm Password</label>
-  <input type="text" name="confirmPassowrd" id="confirmPassword"><br />
+  <input type="text" name="confirmPassowrd" id="confirmPassword">
+  <div id="confirmPasswordE" style="display: none; color: red">Please enter confirm password</div>
+  <br />
 
-  <input type="checkbox" name="consent" id="consent"> I agree to receive emails and messages from this website for whatever thing it wants and filling your inbox<br />
-  <button type="submit" name="submit" id="submit">Submit</button>
+  <input type="checkbox" name="consent" id="consent"> I agree to receive emails and messages from this website for whatever thing it wants and filling your inbox
+  <div id="consentE" style="display: none; color: red">Please enter agree to emailing services</div>
+  <br />
+  <p id="errorEmpty" style="visibility: hidden; color: red">One or more fields are currently empty</p>
+  <button type="button" name="submit" id="submit">Submit</button>
 
 </form>
 
