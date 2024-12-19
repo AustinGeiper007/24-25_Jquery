@@ -47,6 +47,16 @@
             $("#errorEmpty").css({"visibility": "hidden"})
           }
 
+          if($("#state").val() === "empty"){
+            $("#state").css({"border-color": "red"})
+            $("#stateE").css({"display": "block"})
+            $("#errorEmpty").css({"visibility": "visible"})
+          } else {
+            $("#state").css({"border-color": "black"})
+            $("#stateE").css({"display": "none"})
+            $("#errorEmpty").css({"visibility": "hidden"})
+          }
+
           if($("#zipcode").val().length === 0){
             $("#zipcode").css({"border-color": "red"})
             $("#zipE").css({"display": "block"})
@@ -215,6 +225,7 @@
   <label for="zipcode">ZIP</label>
   <input type="text" name="zipcode" id="zipcode">
   <div id="cityE" style="display: none; color: red">Please enter city</div>
+  <div id="stateE" style="display: none; color: red">Please enter a state</div>
   <div id="zipE" style="display: none; color: red">Please enter zip</div>
   <br />
 
