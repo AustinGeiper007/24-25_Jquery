@@ -111,11 +111,23 @@
             $("#confirmPassword").css({"border-color": "red"})
             $("#confirmPasswordE").css({"display": "block"})
             $("#errorEmpty").css({"visibility": "visible"})
+            $("#passwordMatchMsg").css({"display": "none"})
           } else {
             $("#confirmPassword").css({"border-color": "black"})
             $("#confirmPasswordE").css({"display": "none"})
             $("#errorEmpty").css({"visibility": "hidden"})
+            if($("#confirmPassword").val() === $("#password").val()){
+              $("#confirmPassword").css({"border-color": "black"})
+              $("#password").css({"border-color": "black"})
+              $("#passwordMatchMsg").css({"display": "none"})
+            } else {
+              $("#passwordMatchMsg").css({"display": "block"})
+              $("#password").css({"border-color": "red"})
+              $("#confirmPassword").css({"border-color": "red"})
+            }
           }
+
+
 
         });
       });
@@ -233,6 +245,7 @@
   <label for="confirmPassword">Confirm Password</label>
   <input type="text" name="confirmPassowrd" id="confirmPassword">
   <div id="confirmPasswordE" style="display: none; color: red">Please enter confirm password</div>
+  <div id="passwordMatchMsg" style="display: none; color: red">Password fields do not match</div>
   <br />
 
   <input type="checkbox" name="consent" id="consent"> I agree to receive emails and messages from this website for whatever thing it wants and filling your inbox
