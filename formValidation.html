@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
+        // Checks if any part of the form is empty
         $("#submit").click(function(){
           if($("#fname").val().length === 0){
             $("#fname").css({"border-color": "red"})
@@ -136,9 +137,6 @@
               $("#confirmPassword").css({"border-color": "red"})
             }
           }
-
-
-
         });
       });
     </script>
@@ -267,6 +265,5 @@
   <button type="button" name="submit" id="submit">Submit</button>
 
 </form>
-
 </body>
 </html>
