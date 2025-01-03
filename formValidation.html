@@ -91,13 +91,22 @@
             $("#errorEmpty").css({"visibility": "hidden"})
           }
 
+          // via wyzeman on stack overlfow
+          var email_filter = /^(?:(?!.*?[.]{2})[a-zA-Z0-9](?:[a-zA-Z0-9.+!%-]{1,64}|)|\"[a-zA-Z0-9.+!% -]{1,64}\")@[a-zA-Z0-9][a-zA-Z0-9.-]+(.[a-z]{2,}|.[0-9]{1,})$/;
+
           if($("#email").val().length === 0){
             $("#email").css({"border-color": "red"})
             $("#emailE").css({"display": "block"})
+            $("#emailI").css({"display": "none"})
             $("#errorEmpty").css({"visibility": "visible"})
+          } else if(!email_filter.test($("#email").val())) {
+            $("#email").css({"border-color": "red"})
+            $("#emailE").css({"display": "none"})
+            $("#emailI").css({"display": "block"})
           } else {
             $("#email").css({"border-color": "black"})
             $("#emailE").css({"display": "none"})
+            $("#emailI").css({"display": "none"})
             $("#errorEmpty").css({"visibility": "hidden"})
           }
 
@@ -249,6 +258,7 @@
   <label for="email">Email</label>
   <input type="text" name="email" id="email">
   <div id="emailE" class="error" style="display: none">Please enter Email</div>
+  <div id="emailI" class="error" style="display: none">Please enter a valid email</div>
   <br />
 
   <label for="dob">Date of Birth (mm/dd/yyyy)</label>
