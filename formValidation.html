@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Form Validation</title>
+    <style>
+      .error{
+        color: red;
+      }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
@@ -145,19 +150,19 @@
 <form>
   <label for="fname">First Name</label>
   <input type="text" name="fname" id="fname">
-  <div id="fnameE" style="display: none; color: red">Please enter first name</div>
+  <div id="fnameE" class="error" style="display: none; color: red">Please enter first name</div>
   <br />
 
   <label for="lname">Last Name</label>
   <input type="text" name="lname" id="lname">
-  <div id="lnameE" style="display: none; color: red">Please enter last name</div>
+  <div id="lnameE" class="error" style="display: none; color: red">Please enter last name</div>
   <br />
 
   <label for="address">Address</label>
   <input type="text" name="address" id="address">
   <label for="address2">2nd Address</label>
   <input type="text" name="address2" id="address2">
-  <div id="addressE" style="display: none; color: red">Please enter address</div>
+  <div id="addressE" class="error" style="display: none; color: red">Please enter address</div>
   <br />
 
   <label for="city">City</label>
@@ -222,47 +227,47 @@
 
   <label for="zipcode">ZIP</label>
   <input type="text" name="zipcode" id="zipcode">
-  <div id="cityE" style="display: none; color: red">Please enter city</div>
-  <div id="stateE" style="display: none; color: red">Please enter a state</div>
-  <div id="zipE" style="display: none; color: red">Please enter zip</div>
+  <div id="cityE" class="error" style="display: none; color: red">Please enter city</div>
+  <div id="stateE" class="error" style="display: none; color: red">Please enter a state</div>
+  <div id="zipE" class="error" style="display: none; color: red">Please enter zip</div>
   <br />
 
   <label for="phone">Phone</label>
   <input type="text" name="phone" id="phone">
-  <div id="phoneE" style="display: none; color: red">Please enter phone number</div>
+  <div id="phoneE" class="error" style="display: none; color: red">Please enter phone number</div>
   <br />
 
   <label for="email">Email</label>
   <input type="text" name="email" id="email">
-  <div id="emailE" style="display: none; color: red">Please enter Email</div>
+  <div id="emailE" class="error" style="display: none; color: red">Please enter Email</div>
   <br />
 
   <label for="dob">Date of Birth (mm/dd/yyyy)</label>
   <input type="text" name="dob" id="dob">
-  <div id="dobE" style="display: none; color: red">Please enter D.O.B.</div>
+  <div id="dobE" class="error" style="display: none; color: red">Please enter D.O.B.</div>
   <br />
 
   <label for="Username">Username</label>
   <input type="text" name="username" id="username">
-  <div id="usernameE" style="display: none; color: red">Please enter Username</div>
+  <div id="usernameE" class="error" style="display: none; color: red">Please enter Username</div>
   <br />
 
   <label for="password">Password</label>
   <input type="text" name="password" id="password">
-  <div id="passwordE" style="display: none; color: red">Please enter a password</div>
+  <div id="passwordE" class="error" style="display: none; color: red">Please enter a password</div>
   <br />
 
   <label for="confirmPassword">Confirm Password</label>
   <input type="text" name="confirmPassowrd" id="confirmPassword">
-  <div id="confirmPasswordE" style="display: none; color: red">Please confirm password</div>
-  <div id="passwordMatchMsg" style="display: none; color: red">Password fields do not match</div>
+  <div id="confirmPasswordE" class="error" style="display: none; color: red">Please confirm password</div>
+  <div id="passwordMatchMsg" class="error" style="display: none; color: red">Password fields do not match</div>
   <br />
 
   <input type="checkbox" name="consent" id="consent"> I agree to receive emails and messages from this website for whatever thing it wants and filling your inbox
-  <div id="consentE" style="display: none; color: red">Please enter agree to emailing services</div>
+  <div id="consentE" class="error" style="display: none; color: red">Please enter agree to emailing services</div>
   <br />
   <!--Currently only shows this message if confirm password is empty, may remove later-->
-  <p id="errorEmpty" style="visibility: hidden; color: red">One or more fields are currently empty</p>
+  <p id="errorEmpty" class="error" style="visibility: hidden; color: red">One or more fields are currently empty</p>
   <button type="button" name="submit" id="submit">Submit</button>
 
 </form>
