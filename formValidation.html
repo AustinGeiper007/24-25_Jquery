@@ -73,13 +73,21 @@
             $("#errorEmpty").css({"visibility": "hidden"})
           }
 
+          var phone_filter = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+
           if($("#phone").val().length === 0){
             $("#phone").css({"border-color": "red"})
             $("#phoneE").css({"display": "block"})
+            $("#phoneI").css({"display": "none"})
             $("#errorEmpty").css({"visibility": "visible"})
+          } else if(!phone_filter.test($("#phone").val())) {
+            $("#phone").css({"border-color": "red"})
+            $("#phoneE").css({"display": "none"})
+            $("#phoneI").css({"display": "block"})
           } else {
             $("#phone").css({"border-color": "black"})
             $("#phoneE").css({"display": "none"})
+            $("#phoneI").css({"display": "none"})
             $("#errorEmpty").css({"visibility": "hidden"})
           }
 
@@ -232,9 +240,10 @@
   <div id="zipE" class="error" style="display: none">Please enter zip</div>
   <br />
 
-  <label for="phone">Phone</label>
+  <label for="phone">Phone (###-###-####)</label>
   <input type="text" name="phone" id="phone">
   <div id="phoneE" class="error" style="display: none">Please enter phone number</div>
+  <div id="phoneI" class="error" style="display: none">Invalid Phone Number</div>
   <br />
 
   <label for="email">Email</label>
