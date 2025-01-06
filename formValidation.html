@@ -73,6 +73,7 @@
             $("#errorEmpty").css({"visibility": "hidden"})
           }
 
+          // via Mr. Kiedes on Schoology
           var phone_filter = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
 
           if($("#phone").val().length === 0){
@@ -130,7 +131,7 @@
             $("#errorEmpty").css({"visibility": "hidden"})
           }
 
-          if($("#password").val().length === 0){
+          if($("#password").val().length < 10){
             $("#password").css({"border-color": "red"})
             $("#passwordE").css({"display": "block"})
             $("#errorEmpty").css({"visibility": "visible"})
@@ -140,7 +141,7 @@
             $("#errorEmpty").css({"visibility": "hidden"})
           }
 
-          if($("#confirmPassword").val().length === 0){
+          if($("#confirmPassword").val().length < 10){
             $("#confirmPassword").css({"border-color": "red"})
             $("#confirmPasswordE").css({"display": "block"})
             $("#errorEmpty").css({"visibility": "visible"})
@@ -273,7 +274,7 @@
 
   <label for="password">Password</label>
   <input type="text" name="password" id="password">
-  <div id="passwordE" class="error" style="display: none">Please enter a password</div>
+  <div id="passwordE" class="error" style="display: none">Please enter a password (must be at least 10 characters)</div>
   <br />
 
   <label for="confirmPassword">Confirm Password</label>
