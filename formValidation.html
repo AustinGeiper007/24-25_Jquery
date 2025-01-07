@@ -18,61 +18,49 @@
           if($("#fname").val().length === 0){
             $("#fname").css({"border-color": "red"})
             $("#fnameE").css({"display": "block"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else {
             $("#fname").css({"border-color": "black"})
             $("#fnameE").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           if($("#lname").val().length === 0){
             $("#lname").css({"border-color": "red"})
             $("#lnameE").css({"display": "block"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else {
             $("#lname").css({"border-color": "black"})
             $("#lnameE").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           if($("#address").val().length === 0){
             $("#address").css({"border-color": "red"})
             $("#addressE").css({"display": "block"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else {
             $("#address").css({"border-color": "black"})
             $("#addressE").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           if($("#city").val().length === 0){
             $("#city").css({"border-color": "red"})
             $("#cityE").css({"display": "block"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else {
             $("#city").css({"border-color": "black"})
             $("#cityE").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           if($("#state").val() === "empty"){
             $("#state").css({"border-color": "red"})
             $("#stateE").css({"display": "block"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else {
             $("#state").css({"border-color": "black"})
             $("#stateE").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           if($("#zipcode").val().length === 0){
             $("#zipcode").css({"border-color": "red"})
             $("#zipE").css({"display": "block"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else {
             $("#zipcode").css({"border-color": "black"})
             $("#zipE").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           // via Mr. Kiedes on Schoology
@@ -82,7 +70,6 @@
             $("#phone").css({"border-color": "red"})
             $("#phoneE").css({"display": "block"})
             $("#phoneI").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else if(!phone_filter.test($("#phone").val())) {
             $("#phone").css({"border-color": "red"})
             $("#phoneE").css({"display": "none"})
@@ -91,7 +78,6 @@
             $("#phone").css({"border-color": "black"})
             $("#phoneE").css({"display": "none"})
             $("#phoneI").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           // via wyzeman on stack overlfow
@@ -101,7 +87,6 @@
             $("#email").css({"border-color": "red"})
             $("#emailE").css({"display": "block"})
             $("#emailI").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else if(!email_filter.test($("#email").val())) {
             $("#email").css({"border-color": "red"})
             $("#emailE").css({"display": "none"})
@@ -110,48 +95,39 @@
             $("#email").css({"border-color": "black"})
             $("#emailE").css({"display": "none"})
             $("#emailI").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           if($("#dob").val().length === 0){
             $("#dob").css({"border-color": "red"})
             $("#dobE").css({"display": "block"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else {
             $("#dob").css({"border-color": "black"})
             $("#dobE").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           if($("#username").val().length === 0){
             $("#username").css({"border-color": "red"})
             $("#usernameE").css({"display": "block"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else {
             $("#username").css({"border-color": "black"})
             $("#usernameE").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           if($("#password").val().length < 10){
             $("#password").css({"border-color": "red"})
             $("#passwordE").css({"display": "block"})
-            $("#errorEmpty").css({"visibility": "visible"})
           } else {
             $("#password").css({"border-color": "black"})
             $("#passwordE").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
           }
 
           if($("#confirmPassword").val().length < 10){
             $("#confirmPassword").css({"border-color": "red"})
             $("#confirmPasswordE").css({"display": "block"})
-            $("#errorEmpty").css({"visibility": "visible"})
             $("#passwordMatchMsg").css({"display": "none"})
           } else {
             $("#confirmPassword").css({"border-color": "black"})
             $("#confirmPasswordE").css({"display": "none"})
-            $("#errorEmpty").css({"visibility": "hidden"})
             if($("#confirmPassword").val() === $("#password").val()){
               $("#confirmPassword").css({"border-color": "black"})
               $("#password").css({"border-color": "black"})
@@ -283,9 +259,7 @@
 
           <input type="checkbox" name="consent" id="consent"> I agree to receive emails and messages from this website for whatever thing it wants and filling your inbox
           <span id="consentE" class="error">Please agree to emailing services</span>
-          <br />
-          <!--Currently only shows this message if confirm password is empty, may remove later-->
-          <p id="errorEmpty" class="error">One or more fields are currently empty</p>
+          <br /><br />
 
           <button type="button" class="btn btn-light" name="submit" id="submit">Submit</button>
         </form>
