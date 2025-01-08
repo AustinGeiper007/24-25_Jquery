@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulating Session Data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        // Adding/Changing a value in the Session
+        // Set method takes a key-value pair
+        // Think of key like your student ID and value like your info in the school system
+        // .set("key", "value")
+        // This example is in JS because we couldn't get JQuery to work properly
+        sessionStorage.setItem("name", "Austin");
+        // Gets the above value and puts in into the input field
+        updateInputs();
+      });
+
+      function updateInputs(){
+        $("input#name").val(sessionStorage.getItem("name"));
+        $("input#storage").val(sessionStorage.length);
+      }
+
+      function updateName(){
+        // Updates session key "name"
+        sessionStorage.setItem("name", "New Name");
+        // Updates the input field to match
+        updateInputs();
+      }
+
+      function clearSession(){
+        // Clears the entire session
+        sessionStorage.clear();
+        // Update input field to match
+        updateInputs();
+      }
+    </script>
+</head>
+<body>
+<input type="text" id="name" name="test" />
+<button onClick="updateName()">Click Me</button>
+<button onClick="clearSession()">Clear Session</button><br />
+<input type="text" id="storage" />
+
+
+
+</body>
+</html>
