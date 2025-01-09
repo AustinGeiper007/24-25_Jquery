@@ -21,14 +21,20 @@
                 <img class="w-100" id="pencils" src="img/shopping.webp" alt="Box of pencils">
                 <h4>Box of No. 2 Pencils</h4>
                 <h6>$14.99</h6>
-                <button id="No2PencilBoxCart" type="button" class="btn mt-4 bg-primary rounded text-white addToCart">Add to Cart</button>
+                <button id="No2PencilBoxCart" type="button" onClick="addProduct()" class="btn mt-4 bg-primary rounded text-white addToCart">Add to Cart</button>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input disabled type="text" name="total" id="total" value="$0.00" />
         </div>
     </div>
 </div>
 
 
 
+<script src="js/cart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
