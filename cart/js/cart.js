@@ -1,5 +1,5 @@
 function addProduct(){
-    sessionStorage.setItem("price", "14.99")
+    sessionStorage.setItem("total", "15")
     updateTotal();
 }
 function updateTotal(){
